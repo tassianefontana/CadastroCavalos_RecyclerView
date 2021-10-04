@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CadastroCavalos</string>
+    <string name="titulo">Lista de cavalos</string>
+    <string name="cadastro">Cadastro de cavalos</string>
+    <string-array name="genero">
+        <item>Macho</item>
+        <item>Fêmea</item>
+    </string-array>
+</resources>
