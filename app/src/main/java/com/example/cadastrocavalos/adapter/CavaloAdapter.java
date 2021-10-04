@@ -12,6 +12,8 @@ import com.example.cadastrocavalos.R;
 import com.example.cadastrocavalos.controller.CavaloDao;
 import com.example.cadastrocavalos.model.Cavalo;
 
+import java.text.SimpleDateFormat;
+
 public class CavaloAdapter extends RecyclerView.Adapter {
 
     private Context context;
@@ -38,7 +40,7 @@ public class CavaloAdapter extends RecyclerView.Adapter {
         cavaloViewHolder.nome.setText(cavalo.getNome());
         cavaloViewHolder.raca.setText("Raça:" + cavalo.getRaca());
         cavaloViewHolder.genero.setText("Gênero: " + cavalo.getGenero());
-        cavaloViewHolder.dataNascimento.setText("Data de nascimento: " + cavalo.getDataNascimento());
+        cavaloViewHolder.dataNascimento.setText("Data de nascimento: " + new SimpleDateFormat("dd/MM/yyyy").format(cavalo.getDataNascimento()));
         if (cavalo.isCastrado()) {
             cavaloViewHolder.castrado.setText("Castrado: Sim");
         } else {
